@@ -7,6 +7,7 @@
 - fullauto-setup.sh
   - このスクリプトだけですべての設定が入る。(スクリプトだけコピペして使う想定)
   - srcの中身を関係なく実行。
+　- ＊＊＊不具合あり。まだ使わないで。＊＊＊
 
 - auto-script-generator.sh
   - fullauto-setup.shを作るスクリプト。
@@ -22,3 +23,9 @@
     ├── error.html
     └── auto-script-generator.sh
 ```
+
+# TODO: 不具合修正
+- fullauto-setup.sh
+  - CR(^M)が入る。要修正
+- websv.conf
+  - エラーページにステータスコードが渡せず想定した表記にならない。
