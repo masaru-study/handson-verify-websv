@@ -17,7 +17,7 @@
 ├── manual-setup.sh
 ├── fullauto-setup.sh
 └── src/
-    ├── handson-test.conf
+    ├── websv.conf
     ├── index.html
     ├── error.html
     └── auto-script-generator.sh
