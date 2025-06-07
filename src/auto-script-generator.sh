@@ -75,5 +75,5 @@ echo ""
 echo ""
 echo ""
 echo ""
-echo "Generated ${GENERATE_SCRIPT}"
+echo "Generate finish"
 popd >/dev/null
