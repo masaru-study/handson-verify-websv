@@ -14,7 +14,8 @@
 </head>
 <body>
     <div class="container">
-        <h1>エラーが発生しました</h1>
+        <h1>動作確認用Webサーバー</h1>
+        <h1>👎アクセス失敗⛔</h1>
         <p>ステータスコード: <span id="status-code"></span></p>
         <p id="error-cause"></p>
     </div>
@@ -33,9 +34,9 @@
 
             // ステータスコードに応じて原因を自然言語で表示
             if (code >= 400 && code < 500) {
-                errorCauseElement.textContent = 'お客様のリクエストに問題があるようです（クライアントエラー）。URLをご確認の上、再度お試しください。';
+                errorCauseElement.textContent = 'クライアント側で問題があるようです';
             } else if (code >= 500 && code < 600) {
-                errorCauseElement.textContent = 'サーバー側で一時的な問題が発生しました（サーバーエラー）。時間をおいてから再度お試しください。';
+                errorCauseElement.textContent = 'サーバー側で問題があるようです';
             } else {
                 errorCauseElement.textContent = '不明なエラーです。';
             }
