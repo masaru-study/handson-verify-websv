@@ -8,42 +8,21 @@
         body { font-family: sans-serif; text-align: center; margin-top: 50px; color: #555; }
         .container { border: 1px solid #e74c3c; padding: 20px; display: inline-block; border-radius: 8px; background-color: #fbecec; }
         h1 { color: #c0392b; }
-        #status-code { font-weight: bold; font-size: 1.2em; }
-        #error-cause { margin-top: 15px; }
+        .statuscode { font-weight: bold; font-size: 1.2em; }
+        .errormessage { margin-top: 15px; }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>動作確認用Webサーバー</h1>
         <h1>👎アクセス失敗⛔</h1>
-        <p>ステータスコード: <span id="status-code"></span></p>
-        <p id="error-cause"></p>
+        <hr>
+        <div class="statuscode">
+            <p><strong>ステータスコード:</strong> STATUS-CODE</p>
+        </div>
+        <div class="errormessage">
+            <p><strong>ERROR-MSG</strong></p>
+        </div>
     </div>
-
-    <script>
-        // URLのクエリパラメータからステータスコードを取得
-        const params = new URLSearchParams(window.location.search);
-        const statusCode = params.get('status');
-        
-        const statusCodeElement = document.getElementById('status-code');
-        const errorCauseElement = document.getElementById('error-cause');
-
-        if (statusCode) {
-            statusCodeElement.textContent = statusCode;
-            const code = parseInt(statusCode, 10);
-
-            // ステータスコードに応じて原因を自然言語で表示
-            if (code >= 400 && code < 500) {
-                errorCauseElement.textContent = 'クライアント側で問題があるようです';
-            } else if (code >= 500 && code < 600) {
-                errorCauseElement.textContent = 'サーバー側で問題があるようです';
-            } else {
-                errorCauseElement.textContent = '不明なエラーです。';
-            }
-        } else {
-            statusCodeElement.textContent = 'N/A';
-            errorCauseElement.textContent = 'ステータスコードが取得できませんでした。';
-        }
-    </script>
 </body>
 </html>
