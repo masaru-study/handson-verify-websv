@@ -41,18 +41,21 @@ echo "" >> ${GENERATE_SCRIPT}
 echo 'echo "--- Writing config ---"' >> ${GENERATE_SCRIPT}
 echo 'cat << "EOF" > ${DEPLOY_DIR}/${CONF_NAME}' >> ${GENERATE_SCRIPT}
 sed "s@PLEASE_REPLACE_DEPLOY_DIR@${NGINX_DEPLOY_DIR}@g" ./${NGINX_CONF_NAME} >> ${GENERATE_SCRIPT}
+echo "" >> ${GENERATE_SCRIPT}
 echo "EOF" >> ${GENERATE_SCRIPT}
 echo "" >> ${GENERATE_SCRIPT}
 
 echo 'echo "--- Writing index.html ---"' >> ${GENERATE_SCRIPT}
 echo 'cat << "EOF" > ${DEPLOY_DIR}/index.html' >> ${GENERATE_SCRIPT}
 cat ./index.html >> ${GENERATE_SCRIPT}
+echo "" >> ${GENERATE_SCRIPT}
 echo "EOF" >> ${GENERATE_SCRIPT}
 echo "" >> ${GENERATE_SCRIPT}
 
 echo 'echo "--- Writing error.html ---"' >> ${GENERATE_SCRIPT}
 echo 'cat << "EOF" > ${DEPLOY_DIR}/error.html' >> ${GENERATE_SCRIPT}
 cat ./error.html >> ${GENERATE_SCRIPT}
+echo "" >> ${GENERATE_SCRIPT}
 echo "EOF" >> ${GENERATE_SCRIPT}
 echo "" >> ${GENERATE_SCRIPT}
 
