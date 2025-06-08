@@ -12,6 +12,7 @@
 - auto-script-generator.sh
   - fullauto-setup.shを作るスクリプト。
   - メンテナンス用。（実動作には影響しない）
+　- ＊＊＊不具合あり。まだ使わないで。＊＊＊
 
 ```
 .
@@ -25,7 +26,5 @@
 ```
 
 # TODO: 不具合修正
-- fullauto-setup.sh
+- fullauto-setup.sh と auto-script-generator.sh
   - CR(^M)が入る。要修正
-- websv.conf
-  - エラーページにステータスコードが渡せず想定した表記にならない。
