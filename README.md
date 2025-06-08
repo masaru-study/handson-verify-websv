@@ -23,6 +23,3 @@
     └── auto-script-generator.sh
 ```
 
-# TODO: 不具合修正
-- fullauto-setup.sh と auto-script-generator.sh
-  - CR(^M)が入る。要修正
